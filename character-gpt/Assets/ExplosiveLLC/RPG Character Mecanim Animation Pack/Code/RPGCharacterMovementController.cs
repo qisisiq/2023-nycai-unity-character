@@ -780,7 +780,7 @@ namespace RPGCharacterAnims
 
         private void OnTriggerEnter(Collider collide)
         {
-			Debug.Log($"OnTriggerEnter: {collide}");
+			//Debug.Log($"OnTriggerEnter: {collide}");
 
 			// Entering a water volume.
 			if (collide.gameObject.layer == 4) { rpgCharacterController.StartAction(HandlerTypes.Swim); }

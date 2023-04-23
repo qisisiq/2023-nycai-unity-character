@@ -349,6 +349,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 862521217}
+    - target: {fileID: 1738014860437994349, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
+      propertyPath: memoryDB
+      value: 
+      objectReference: {fileID: 11400000, guid: ccae85d9297fce7469c274b75d769ad6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
 --- !u!1 &212206882
@@ -986,6 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6c8903125090b4c9d439b809b2907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  memoryDB: {fileID: 11400000, guid: ccae85d9297fce7469c274b75d769ad6, type: 2}
   initialPrompt: You are a sword man follower to the player, named Frank
   textField: {fileID: 832527745}
   textField_NPC: {fileID: 750871984}
