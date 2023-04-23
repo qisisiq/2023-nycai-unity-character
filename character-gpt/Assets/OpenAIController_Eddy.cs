@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class OpenAIController_Eddy : MonoBehaviour
 {
+    public static event Action<string> OnChatResponseRecieved;
     [SerializeField] MemoryDataBase memoryDB;
     [TextArea(4,100)]
     public string initialPrompt;
@@ -109,7 +110,7 @@ public class OpenAIController_Eddy : MonoBehaviour
         // Update the text field with the response
         textField.text = string.Format("You: {0}\n\nFriend Soldier: {1}", userMessage.Content, responseMessage.Content);
 
-        memoryDB.AddNewMemory("AI said:" + responseMessage.Content);
+        memoryDB.AddNewMemory("Marcus said:" + responseMessage.Content);
 
         textField_NPC.text = responseMessage.Content;
         var s = textFieldBG_NPC.localScale;
@@ -118,6 +119,8 @@ public class OpenAIController_Eddy : MonoBehaviour
         textFieldBG_NPC.localScale = s;
         // Re-enable the OK button
         okButton.enabled = true;
+
+        OnChatResponseRecieved?.Invoke(textField.text);
     }
 
 	private void OnApplicationQuit()

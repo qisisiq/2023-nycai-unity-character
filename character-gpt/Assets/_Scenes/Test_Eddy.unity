@@ -487,6 +487,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 862521217}
     - target: {fileID: 1738014860437994349, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
+      propertyPath: myName
+      value: Marcus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738014860437994349, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
       propertyPath: memoryDB
       value: 
       objectReference: {fileID: 11400000, guid: ccae85d9297fce7469c274b75d769ad6, type: 2}
@@ -1022,6 +1026,10 @@ PrefabInstance:
       propertyPath: m_Animation
       value: 
       objectReference: {fileID: 1827226128182048838, guid: c82005efa6bc65e4c838bdcfb57759d7, type: 3}
+    - target: {fileID: 8417109485626960986, guid: 3a555105d974c19488b7be673891a5d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a555105d974c19488b7be673891a5d4, type: 3}
 --- !u!1 &366718490
@@ -1044,7 +1052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &366718491
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1229,7 +1237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &601086349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2123,7 +2131,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1069340824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2966,6 +2974,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3340652266922605143, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114488678005819994, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
@@ -3796,7 +3808,7 @@ GameObject:
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1721937514
 MonoBehaviour:
   m_ObjectHideFlags: 0
