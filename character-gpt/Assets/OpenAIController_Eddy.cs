@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class OpenAIController_Eddy : MonoBehaviour
 {
+    [SerializeField] MemoryDataBase memoryDB;
     [TextArea(4,100)]
     public string initialPrompt;
     public TMP_Text textField;
@@ -84,6 +85,7 @@ public class OpenAIController_Eddy : MonoBehaviour
         // Clear the input field
         inputField.text = "";
 
+        memoryDB.AddNewMemory("Player said:" + userMessage.Content);
         // Send the entire chat to OpenAI to get the next message
         var chatResult = await api.Chat.CreateChatCompletionAsync(new ChatRequest()
         {
@@ -104,6 +106,9 @@ public class OpenAIController_Eddy : MonoBehaviour
 
         // Update the text field with the response
         textField.text = string.Format("You: {0}\n\nFriend Soldier: {1}", userMessage.Content, responseMessage.Content);
+
+        memoryDB.AddNewMemory("AI said:" + responseMessage.Content);
+
         textField_NPC.text = responseMessage.Content;
         var s = textFieldBG_NPC.localScale;
         print(textField_NPC.textBounds.size.y);
