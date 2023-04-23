@@ -33,6 +33,8 @@ public class OpenAIController_Eddy : MonoBehaviour
         api = new OpenAIAPI(apiKey);
         StartConversation();
         okButton.onClick.AddListener(() => GetResponse());
+
+        memoryDB.Init();
     }
 
 	private void Update()
@@ -117,4 +119,9 @@ public class OpenAIController_Eddy : MonoBehaviour
         // Re-enable the OK button
         okButton.enabled = true;
     }
+
+	private void OnApplicationQuit()
+	{
+        memoryDB.Reset();
+	}
 }

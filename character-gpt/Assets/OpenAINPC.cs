@@ -19,8 +19,9 @@ public class OpenAINPC : MonoBehaviour
     private RPGCharacterNavigationController rpgNavigationController;
 
     private int health = 5;
-    
 
+    bool death = false;
+    bool hit = false;
 
     private void OnEnable()
     {
@@ -92,22 +93,38 @@ public class OpenAINPC : MonoBehaviour
             rpgCharacterController.StartAction(HandlerTypes.GetHit, new HitContext());
 
             health--;
-            if (health <= 0)
+            if (health <= 0 && !death)
             {
-            CharacterDied(other.gameObject);
+                CharacterDied(other.gameObject);
+            }
+            else if(!hit)
+            {
+                hit = true;
+                memoryDB.AddNewMemory($"{myName} was hit by {other.gameObject.name}!");
+                Invoke("ResetBool", 3);
             }
 
-            memoryDB.AddNewMemory($"{myName} was hit by {other.gameObject.name}!");
         }
+    }
+
+    void ResetBool()
+	{
+        hit = false;
+	}
+
+    void Revive()
+	{
+        death = false;
     }
 
     private void CharacterDied(GameObject killer)
     {
+        death = true;
         rpgCharacterController.StartAction(HandlerTypes.Knockdown,
             new HitContext((int)KnockdownType.Knockdown1, Vector3.back));
         
         Debug.Log(myName + " has died");
         memoryDB.AddNewMemory($"{myName} was KILLED by {killer.name}... damn");
-        
+        Invoke("Revive", 3);
     }
 }
