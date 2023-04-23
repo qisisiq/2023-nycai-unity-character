@@ -115,6 +115,7 @@ namespace RPGCharacterAnims
 		        inputShield = Input.GetButtonDown("Shield");
 		        inputRelax = Input.GetButtonDown("Relax");
 
+				/*
 		        // Injury toggle.
 		        if (rpgCharacterController.HandlerExists(HandlerTypes.Injure)) {
 			        if (Input.GetKeyDown(KeyCode.I)) {
@@ -137,6 +138,7 @@ namespace RPGCharacterAnims
 						{ rpgCharacterController.TryEndAction(HandlerTypes.SlowTime); }
 			        }
 		        }
+				*/
 	        }
 	        catch (Exception)
 			{ Debug.LogError("Inputs not found! Please read Readme, or watch https://www.youtube.com/watch?v=ruufqlXrCzU"); }

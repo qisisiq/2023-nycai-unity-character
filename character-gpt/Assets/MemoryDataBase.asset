@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ddfebf5264f59448012eb165262acd, type: 3}
   m_Name: MemoryDataBase
   m_EditorClassIdentifier: 
+  initialPrompt_Memory: as a narrator in the video game, this is all the recent memory
+    happened in the game. in the format of  [Timestamp, Content], now summary the
+    whole memory into a short paragraph
+  memoryList: []
+  shortermMemory: []
+  compressedMemory: []
