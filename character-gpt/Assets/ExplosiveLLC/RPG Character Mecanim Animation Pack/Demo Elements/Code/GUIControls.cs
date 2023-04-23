@@ -205,6 +205,8 @@ namespace RPGCharacterAnims
 			if (GUI.Button(new Rect(130, 145, 100, 30), "Right Kick2"))
 			{ rpgCharacterController.StartAction(HandlerTypes.Attack, new AttackContext("Kick", Side.Right, ( int )KickType.RightKick2)); }
 		}
+		
+		
 
 		private void Damage()
         {
