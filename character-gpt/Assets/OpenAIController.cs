@@ -20,8 +20,10 @@ public class OpenAIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        APIAuthentication apiKey = new APIAuthentication("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");
+
         // This line gets your API key (and could be slightly different on Mac/Linux)
-        api = new OpenAIAPI(Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.User));
+        api = new OpenAIAPI(apiKey);
         StartConversation();
         okButton.onClick.AddListener(() => GetResponse());
     }
