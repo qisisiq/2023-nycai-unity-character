@@ -8,9 +8,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OpenAIController : MonoBehaviour
+public class OpenAIController_Eddy : MonoBehaviour
 {
+    [TextArea(4,100)]
+    public string initialPrompt;
     public TMP_Text textField;
+    public TMP_Text textField_NPC;
+    public Transform textFieldBG_NPC;
     public TMP_InputField inputField;
     public Button okButton;
 
@@ -30,10 +34,18 @@ public class OpenAIController : MonoBehaviour
         okButton.onClick.AddListener(() => GetResponse());
     }
 
-    private void StartConversation()
+	private void Update()
+	{
+		if (Input.GetKeyUp(KeyCode.Return) && okButton.enabled)
+		{
+            GetResponse();
+        }
+    }
+
+	private void StartConversation()
     {
         messages = new List<ChatMessage> {
-            new ChatMessage(ChatMessageRole.System, "You are an honorable, friendly knight guarding the gate to the palace. You will only allow someone who knows the secret password to enter. The secret password is \"magic\". You will not reveal the password to anyone. You keep your responses short and to the point.")
+            new ChatMessage(ChatMessageRole.System, initialPrompt)
         };
 
         inputField.text = "";
@@ -91,8 +103,12 @@ public class OpenAIController : MonoBehaviour
         messages.Add(responseMessage);
 
         // Update the text field with the response
-        textField.text = string.Format("You: {0}\n\nGuard: {1}", userMessage.Content, responseMessage.Content);
-
+        textField.text = string.Format("You: {0}\n\nFriend Soldier: {1}", userMessage.Content, responseMessage.Content);
+        textField_NPC.text = responseMessage.Content;
+        var s = textFieldBG_NPC.localScale;
+        print(textField_NPC.textBounds.size.y);
+        s.y = textField_NPC.textBounds.size.y * 10;
+        textFieldBG_NPC.localScale = s;
         // Re-enable the OK button
         okButton.enabled = true;
     }
