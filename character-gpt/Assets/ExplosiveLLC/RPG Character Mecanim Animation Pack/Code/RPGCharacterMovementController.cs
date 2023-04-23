@@ -269,8 +269,11 @@ namespace RPGCharacterAnims
 
 		void Update()
         {
-            if (!superCharacterController.enabled)
-			{ gameObject.SendMessage("SuperUpdate", SendMessageOptions.DontRequireReceiver); }
+	        if (superCharacterController != null)
+	        {
+		        if (!superCharacterController.enabled)
+		        { gameObject.SendMessage("SuperUpdate", SendMessageOptions.DontRequireReceiver); }
+	        }
         }
 
         protected override void EarlyGlobalSuperUpdate()
@@ -777,7 +780,7 @@ namespace RPGCharacterAnims
 
         private void OnTriggerEnter(Collider collide)
         {
-			Debug.Log($"OnTriggerEnter: {collide}");
+			//Debug.Log($"OnTriggerEnter: {collide}");
 
 			// Entering a water volume.
 			if (collide.gameObject.layer == 4) { rpgCharacterController.StartAction(HandlerTypes.Swim); }

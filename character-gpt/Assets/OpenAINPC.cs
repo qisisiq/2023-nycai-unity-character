@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class OpenAINPC : MonoBehaviour
 {
+    [SerializeField] MemoryDataBase memoryDB;
     [SerializeField] public string myName = "Obenayeye";
     [SerializeField] private List<string> Actions; // a list of actions the character can take 
 
@@ -16,6 +17,8 @@ public class OpenAINPC : MonoBehaviour
     
     private RPGCharacterController rpgCharacterController;
     private RPGCharacterNavigationController rpgNavigationController;
+
+    private int health = 5;
     
 
 
@@ -26,12 +29,15 @@ public class OpenAINPC : MonoBehaviour
 
     private void OnDisable()
     {
+        
     }
 
     void Start()
     {
         rpgCharacterController = GetComponent<RPGCharacterController>();
         rpgNavigationController = GetComponent<RPGCharacterNavigationController>();
+
+        health = 5;
 
     }
 
@@ -49,11 +55,10 @@ public class OpenAINPC : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         attackCollider.enabled = false;
-        
-        GameStateData.AddToGameState($"{myName} threw a punch.");
+
+        memoryDB.AddNewMemory($"{myName} threw a punch.");
     }
 
-    
     void Wave()
     {
         StartCoroutine(PlayAttack());
@@ -64,7 +69,7 @@ public class OpenAINPC : MonoBehaviour
     {
         rpgCharacterController.target = transform;
         rpgCharacterController.StartAction(HandlerTypes.EmoteCombat, EmoteType.Boost);
-        GameStateData.AddToGameState($"{myName} has waved to {transform.gameObject.name}.");
+        memoryDB.AddNewMemory($"{myName} has waved to {transform.gameObject.name}.");
 
         yield return new WaitForSeconds(2.5f);
         
@@ -75,8 +80,8 @@ public class OpenAINPC : MonoBehaviour
     void WalkTo(Transform transform)
     {
         rpgCharacterController.StartAction(HandlerTypes.Navigation, transform.position);
-        
-        GameStateData.AddToGameState($"{myName} has waved to {transform.gameObject.name}.");
+
+        memoryDB.AddNewMemory($"{myName} has waved to {transform.gameObject.name}.");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -85,8 +90,24 @@ public class OpenAINPC : MonoBehaviour
         {
             Debug.Log("was attacked");
             rpgCharacterController.StartAction(HandlerTypes.GetHit, new HitContext());
-            
-            GameStateData.AddToGameState($"{myName} was hit by {other.gameObject.name}!");
+
+            health--;
+            if (health <= 0)
+            {
+            CharacterDied(other.gameObject);
+            }
+
+            memoryDB.AddNewMemory($"{myName} was hit by {other.gameObject.name}!");
         }
+    }
+
+    private void CharacterDied(GameObject killer)
+    {
+        rpgCharacterController.StartAction(HandlerTypes.Knockdown,
+            new HitContext((int)KnockdownType.Knockdown1, Vector3.back));
+        
+        Debug.Log(myName + " has died");
+        memoryDB.AddNewMemory($"{myName} was KILLED by {killer.name}... damn");
+        
     }
 }
