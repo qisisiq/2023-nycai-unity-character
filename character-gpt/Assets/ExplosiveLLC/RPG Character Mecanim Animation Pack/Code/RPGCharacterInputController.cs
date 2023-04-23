@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using RPGCharacterAnims.Actions;
 using RPGCharacterAnims.Extensions;
@@ -11,6 +12,8 @@ namespace RPGCharacterAnims
 	public class RPGCharacterInputController : MonoBehaviour
     {
         RPGCharacterController rpgCharacterController;
+        [SerializeField] private Collider attackCollider;
+
 
         // Inputs.
         private float inputHorizontal = 0;
@@ -285,13 +288,27 @@ namespace RPGCharacterAnims
             if (inputAttackL)
 			{ rpgCharacterController.StartAction(HandlerTypes.Attack, new AttackContext(HandlerTypes.Attack, Side.Left)); }
 			else if (inputAttackR)
-			{ rpgCharacterController.StartAction(HandlerTypes.Attack, new AttackContext(HandlerTypes.Attack, Side.Right)); }
+            {
+	            StartCoroutine(AttackWithCollider());
+	            
+            }
 			else if (inputCastL)
 			{ rpgCharacterController.StartAction(HandlerTypes.AttackCast, new AttackCastContext(AnimationVariations.AttackCast.TakeRandom(), Side.Left)); }
 			else if (inputCastR)
 			{ rpgCharacterController.StartAction(HandlerTypes.AttackCast, new AttackCastContext(AnimationVariations.AttackCast.TakeRandom(), Side.Right)); }
         }
 
+        private IEnumerator AttackWithCollider()
+        {
+	        Debug.Log("attack with collider called");
+	        attackCollider.enabled = true;
+	        rpgCharacterController.StartAction(HandlerTypes.Attack, new AttackContext(HandlerTypes.Attack, Side.Right));
+
+	        yield return new WaitForSeconds(2f);
+	        attackCollider.enabled = false;
+
+        }
+        
         private void Damage()
         {
 			// Check to make sure GetHit Action exists.
