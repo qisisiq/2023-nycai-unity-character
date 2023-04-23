@@ -438,6 +438,7 @@ namespace RPGCharacterAnims
             SetHandler(HandlerTypes.Strafe, new SimpleActionHandler(StartStrafe, EndStrafe));
             SetHandler(HandlerTypes.Turn, new Turn());
 
+
             OnLockActions += LockHeadlook;
             OnUnlockActions += UnlockHeadlook;
 

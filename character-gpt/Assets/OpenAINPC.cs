@@ -16,6 +16,8 @@ public class OpenAINPC : MonoBehaviour
     
     private RPGCharacterController rpgCharacterController;
     private RPGCharacterNavigationController rpgNavigationController;
+
+    private int health = 5;
     
 
 
@@ -26,12 +28,15 @@ public class OpenAINPC : MonoBehaviour
 
     private void OnDisable()
     {
+        
     }
 
     void Start()
     {
         rpgCharacterController = GetComponent<RPGCharacterController>();
         rpgNavigationController = GetComponent<RPGCharacterNavigationController>();
+
+        health = 5;
 
     }
 
@@ -53,7 +58,6 @@ public class OpenAINPC : MonoBehaviour
         GameStateData.AddToGameState($"{myName} threw a punch.");
     }
 
-    
     void Wave()
     {
         StartCoroutine(PlayAttack());
@@ -87,6 +91,22 @@ public class OpenAINPC : MonoBehaviour
             rpgCharacterController.StartAction(HandlerTypes.GetHit, new HitContext());
             
             GameStateData.AddToGameState($"{myName} was hit by {other.gameObject.name}!");
+
+            health--;
+            if (health <= 0)
+            {
+                CharacterDied(other.gameObject);
+            }
         }
+    }
+
+    private void CharacterDied(GameObject killer)
+    {
+        rpgCharacterController.StartAction(HandlerTypes.Knockdown,
+            new HitContext((int)KnockdownType.Knockdown1, Vector3.back));
+        
+        Debug.Log(myName + " has died");
+        GameStateData.AddToGameState($"{myName} was KILLED by {killer.name}... damn");
+        
     }
 }
