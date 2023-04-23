@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 779107295162273411}
   - component: {fileID: 1738014860437994349}
   - component: {fileID: 2730613356387986655}
+  - component: {fileID: 9170520294050911953}
   m_Layer: 0
   m_Name: RPG-Character-NPC
   m_TagString: Untagged
@@ -163,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca61dd221dc9264ab81802bfc9511e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myName: Obenayeye
   Actions: []
   attackCollider: {fileID: 5873217896978697253}
 --- !u!65 &2730613356387986655
@@ -178,6 +180,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 2.5, z: 1.5}
   m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!114 &9170520294050911953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f8445ce871a9b46b22d4812ecda9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackMultiplier: 0
+  movementAnimationMultiplier: 1
+  currentVelocity: {x: 0, y: 0, z: 0}
+  walkSpeed: 0.5
+  walkAccel: 15
+  runSpeed: 1
+  runAccel: 30
+  sprintSpeed: 2
+  sprintAccel: 15
+  crouchSpeed: 0.25
+  crouchAccel: 15
+  crawlSpeed: 0.15
+  crawlAccel: 15
+  injuredSpeed: 0.675
+  injuredAccel: 20
+  groundFriction: 120
+  rotationSpeed: 100
+  canJump: 0
+  holdingJump: 0
+  canDoubleJump: 0
+  jumpSpeed: 12
+  jumpGravity: 24
+  allowDoubleJump: 1
+  doubleJumpSpeed: 8
+  inAirSpeed: 8
+  inAirAccel: 16
+  fallGravity: 32
+  fallingControl: 1
+  swimSpeed: 4
+  swimAccel: 4
+  strokeSpeed: 6
+  waterFriction: 5
+  debugMessages: 1
 --- !u!1 &5017534650380093057
 GameObject:
   m_ObjectHideFlags: 0
