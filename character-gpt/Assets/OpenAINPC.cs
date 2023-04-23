@@ -90,11 +90,12 @@ public class OpenAINPC : MonoBehaviour
         {
             Debug.Log("was attacked");
             rpgCharacterController.StartAction(HandlerTypes.GetHit, new HitContext());
-            }
-                CharacterDied(other.gameObject);
-            {
-            if (health <= 0)
+
             health--;
+            if (health <= 0)
+            {
+            CharacterDied(other.gameObject);
+            }
 
             memoryDB.AddNewMemory($"{myName} was hit by {other.gameObject.name}!");
         }
@@ -106,7 +107,7 @@ public class OpenAINPC : MonoBehaviour
             new HitContext((int)KnockdownType.Knockdown1, Vector3.back));
         
         Debug.Log(myName + " has died");
-        GameStateData.AddToGameState($"{myName} was KILLED by {killer.name}... damn");
+        memoryDB.AddNewMemory($"{myName} was KILLED by {killer.name}... damn");
         
     }
 }
