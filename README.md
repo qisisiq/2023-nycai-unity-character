@@ -3,7 +3,7 @@
 LLMs powering 3D game engines
 
 - Nhan Tran, Cornell CS PhD' 27
-- Luella Sun, Niantic
+- Luella Sun
 - Wengu Hu, DGSpitzer
 - Anne Wu, Cornell CS PhD' 26
 - Matheus Portela, Justworks 
