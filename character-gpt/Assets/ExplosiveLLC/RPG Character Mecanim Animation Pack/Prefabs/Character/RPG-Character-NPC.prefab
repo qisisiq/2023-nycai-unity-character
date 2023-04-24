@@ -164,9 +164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca61dd221dc9264ab81802bfc9511e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Obenayeye
+  myName: Marcus
   Actions: []
   attackCollider: {fileID: 5873217896978697253}
+  deadBody: {fileID: 0}
 --- !u!65 &2730613356387986655
 BoxCollider:
   m_ObjectHideFlags: 0

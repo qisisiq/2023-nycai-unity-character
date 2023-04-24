@@ -425,7 +425,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &140480701
 PrefabInstance:
@@ -436,11 +436,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
       propertyPath: m_Name
-      value: RPG-Character-NPC
+      value: Marcus
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
       propertyPath: m_LocalPosition.x
@@ -486,6 +486,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 862521217}
+    - target: {fileID: 779107295162273411, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1738014860437994349, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
       propertyPath: myName
       value: Marcus
@@ -703,7 +707,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &213064128
 GameObject:
@@ -988,7 +992,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 450160, guid: 3a555105d974c19488b7be673891a5d4, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 450160, guid: 3a555105d974c19488b7be673891a5d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1145,7 +1149,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &366718496
 Animator:
@@ -1314,7 +1318,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -45.000004, z: 30.000002}
 --- !u!114 &601086353
 MonoBehaviour:
@@ -1698,7 +1702,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &740407299
 MonoBehaviour:
@@ -1723,14 +1727,14 @@ MonoBehaviour:
     challenges and uncover hidden secrets as they delve into the treacherous depths
     of the forest. As the duo unravels the relic's mystery, their bond grows stronger,
     and they learn the true meaning of trust and loyalty.\r\n\r\nList of assets:\r\n1.
-    Trees\r\n2. Lake\r\n3. Blocks of stones\r\n4. Wooden box\r\n\r\nGeneral instructions:\r\n1.
-    Read the adventurer's interaction (either: an @Action, or a @Dialogue and an
-    @Action, or a @Dialogue)\r\n2. Choose the action that's the most adapted to the
-    current situation, mandatorily from the list of actions, and return it in the
-    format specified in the examples.\r\n3. If there are no previous interactions,
-    choose the action based on the initial scene. The examples are just used for
-    formatting, not for story history.\r\n4. If there are previous interactions,
-    choose the action based on the initial scene and the previous interactions.\r\n5.
+    Trees\r\n2. Lake\r\n3. Blocks of stones\r\n4. Wooden box\r\n5. Pumpkin\n\r\nGeneral
+    instructions:\r\n1. Read the adventurer's interaction (either: an @Action, or
+    a @Dialogue and an @Action, or a @Dialogue)\r\n2. Choose the action that's the
+    most adapted to the current situation, mandatorily from the list of actions,
+    and return it in the format specified in the examples.\r\n3. If there are no
+    previous interactions, choose the action based on the initial scene. The examples
+    are just used for formatting, not for story history.\r\n4. If there are previous
+    interactions, choose the action based on the initial scene and the previous interactions.\r\n5.
     You should only output the interaction for your role, not for the adventurer.\r\n6.
     Try to limit your role's dialogue to 2 sentences maximum.\r\n\r\nRoleplay definition:\r\nChatGPT,
     you are now the soldier Marcus.\r\nSoldier (Marcus):\r\n    Age: Mid-30s\r\n   
@@ -2112,6 +2116,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 3}
   m_PrefabInstance: {fileID: 1885862580}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1023362067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023362068}
+  m_Layer: 0
+  m_Name: The person calling for help
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023362068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023362067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 862521217}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1069340823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,7 +2255,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -210, z: 0}
 --- !u!1 &1111777517
 GameObject:
@@ -2317,7 +2352,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1190077156
 PrefabInstance:
@@ -2499,6 +2534,10 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 135816, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
+      propertyPath: m_Name
+      value: Trees
+      objectReference: {fileID: 0}
+    - target: {fileID: 135816, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -2565,6 +2604,10 @@ PrefabInstance:
     - target: {fileID: 148384, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 149778, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
+      propertyPath: m_Name
+      value: Blocks of stone
       objectReference: {fileID: 0}
     - target: {fileID: 149778, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
       propertyPath: m_Layer
@@ -2764,7 +2807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 469340, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 469340, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2833,6 +2876,10 @@ PrefabInstance:
     - target: {fileID: 6543790, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1107988743530146, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
+      propertyPath: m_Name
+      value: House
       objectReference: {fileID: 0}
     - target: {fileID: 1107988743530146, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
       propertyPath: m_Layer
@@ -3010,7 +3057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224150913842070756, guid: 16dc4b51d7b30f74a9fd33417596daa7, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224150913842070756, guid: 16dc4b51d7b30f74a9fd33417596daa7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3099,7 +3146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 450160, guid: 498a894c42cb19540994e33061f46a65, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 450160, guid: 498a894c42cb19540994e33061f46a65, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3298,6 +3345,75 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 150160, guid: 498a894c42cb19540994e33061f46a65, type: 3}
   m_PrefabInstance: {fileID: 1215999709}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1502029796
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.875
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.875
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.875
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.3413525
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.1256738
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
+      propertyPath: m_Name
+      value: Pumpkin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee66d5f241a632c49b258b31b755b73b, type: 3}
 --- !u!1 &1519272073
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,6 +3492,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519272073}
   m_CullTransparentMesh: 1
+--- !u!1 &1531224198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1531224199}
+  m_Layer: 0
+  m_Name: Lake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1531224199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531224198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.82, y: -0.09, z: -11.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541713145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,7 +4044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -165.00002, z: 0}
 --- !u!850595691 &1726547775
 LightingSettings:
@@ -4188,8 +4335,39 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50.000004, y: 37.609, z: 0}
+--- !u!1 &1795569660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795569661}
+  m_Layer: 0
+  m_Name: Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1795569661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795569660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.82, y: -0.09, z: -11.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802332361 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 184492, guid: d88046430d0ae344b86ab8454d6e0f33, type: 3}
@@ -4417,7 +4595,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 3}
       propertyPath: m_Name
-      value: RPG-Character
+      value: Adventurer
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 3}
       propertyPath: m_RootOrder
@@ -4600,7 +4778,7 @@ RectTransform:
   - {fileID: 1519272074}
   - {fileID: 1815132733}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4653,7 +4831,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2094343468
 GameObject:
@@ -4733,3 +4911,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094343468}
   m_CullTransparentMesh: 1
+--- !u!1 &2109452173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
+  m_PrefabInstance: {fileID: 140480701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2109452176 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1738014860437994349, guid: ed22bc4f246329d4480e264cb515f115, type: 3}
+  m_PrefabInstance: {fileID: 140480701}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109452173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca61dd221dc9264ab81802bfc9511e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2109452183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109452173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690532df189141c48bdae415f46e5f57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 2109452176}

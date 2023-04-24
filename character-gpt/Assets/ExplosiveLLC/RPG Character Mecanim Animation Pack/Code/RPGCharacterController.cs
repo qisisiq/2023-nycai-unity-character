@@ -422,7 +422,7 @@ namespace RPGCharacterAnims
             SetHandler(HandlerTypes.Cast, new Cast());
             SetHandler(HandlerTypes.AttackCast, new AttackCast());
             SetHandler(HandlerTypes.Crouch, new SimpleActionHandler(StartCrouch, EndCrouch));
-            SetHandler(HandlerTypes.Death, new SimpleActionHandler(Death, Revive));
+            SetHandler(HandlerTypes.Death, new SimpleActionHandler(Death, Death));
             SetHandler(HandlerTypes.Dodge, new Dodge());
             SetHandler(HandlerTypes.Talk, new Talk());
             SetHandler(HandlerTypes.Emote, new Emote());
