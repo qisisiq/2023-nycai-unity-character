@@ -6,6 +6,7 @@ LLMs powering 3D game engines
 - Luella Sun, Niantic
 - Wengu Hu, DGSpitzer
 - Anne Wu, Cornell CS PhD' 26
+- Matheus Portela, Justworks 
 
 
 In this immersive world, generative agents built in Unity come to life, utilizing OpenAI's GPT to process memories, connect characters, and reveal emergent patterns. This unique simulation unites large language models and virtual interactions
@@ -13,9 +14,13 @@ In this immersive world, generative agents built in Unity come to life, utilizin
 
 ## Video (turn on your speaker)
 
-##### Theme song `Runaway` from HBO's West World)
+##### Theme song `Runaway` from HBO's West World
 
-https://user-images.githubusercontent.com/10265967/233873493-fd361ae3-ea24-43eb-bcf8-a86ea0b9f8e5.mov
+https://youtu.be/5DcABeOltL8
+
+https://user-images.githubusercontent.com/10265967/234069529-841cae13-3a56-46a7-b13d-98e28f8e3c1d.mov
+
+
 
 ## How
 
